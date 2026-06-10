@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 item = input("Enter the item you wanna buy: ")
+quantity = int(input("Enter the number of items: "))
 price = float(input("Enter the price of the item: "))
 class CashRegister:
-  price = 0
+  total_amount = 0
   total_discount = 0
   total_items = []
   previous_transactions = []
@@ -25,4 +26,6 @@ class CashRegister:
       raise ValueError("Not valid discount.")
     
   def add_item(self, item, price, quantity):
-    pass
+    price += self.total_amount
+    item += self.total_items
+    quantity += item
