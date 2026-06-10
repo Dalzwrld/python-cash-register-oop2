@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-cash = float(input("Enter the amount you wanna deposit: "))
+item = input("Enter the item you wanna buy: ")
+price = float(input("Enter the price of the item: "))
 class CashRegister:
-  cash = 0
+  price = 0
   total_discount = 0
   total_items = []
   previous_transactions = []
@@ -22,3 +23,6 @@ class CashRegister:
       self._discount = value
     else:
       raise ValueError("Not valid discount.")
+    
+  def add_item(self, item, price, quantity):
+    pass
