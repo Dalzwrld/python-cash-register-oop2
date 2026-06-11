@@ -48,8 +48,7 @@ class CashRegister:
     last_transaction = self.previous_transactions.pop()
 
     amount = (
-      last_transaction["price"]
-      * last_transaction["quantity"]
+      last_transaction["price"] * last_transaction["quantity"]
     )
 
     self.total -= amount
