@@ -3,16 +3,11 @@ item = input("Enter the item you wanna buy: ")
 quantity = int(input("Enter the number of items: "))
 price = float(input("Enter the price of the item: "))
 class CashRegister:
-  total_amount = 0
-  total_discount = 0
-  total_items = []
-  previous_transactions = []
-
-  def __init__(self, discount, total, items, previous_transactions):
+  def __init__(self, discount=0):
     self.discount = discount
-    self.total = total
-    self.items = items
-    self.previous_transactions = previous_transactions
+    self.total = 0
+    self.items = []
+    self.previous_transactions = []
 
   @property
   def discount(self):
