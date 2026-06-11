@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-item = input("Enter the item you wanna buy: ")
-quantity = int(input("Enter the number of items: "))
-price = float(input("Enter the price of the item: "))
 class CashRegister:
   def __init__(self, discount=0):
     self.discount = discount
